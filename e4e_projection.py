@@ -10,7 +10,7 @@ from util import *
 
 
 @ torch.no_grad()
-def projection(img, name, device='cuda'):
+def projection(img, name, device='cuda', model_path = 'models/e4e_ffhq_encode.pt'):
     model_path = 'models/e4e_ffhq_encode.pt'
     ckpt = torch.load(model_path, map_location='cpu')
     opts = ckpt['opts']
